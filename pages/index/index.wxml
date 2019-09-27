@@ -1,0 +1,30 @@
+<view>
+  <view class="title">试衣间</view>
+  <view class="showRoom">
+    <canvas canvas-id="myCanvas" class="sameSize border"></canvas>
+  </view>
+  <view>
+    <scroll-view scroll-x class="bg-green nav text-center">
+      <view wx:for="{{wardrobe}}" wx:key class="cu-item {{index==TabCur?'text-white cur':''}}" bindtap="tabSelect"
+        data-id="{{index}}">
+        <text class="cuIcon-clothesfill {{item.badge?'text-red':''}}"></text> {{item.name}}
+      </view>
+    </scroll-view>
+    <view wx:for="{{wardrobe}}" wx:key wx:if="{{index==TabCur}}">
+      <view>
+        <view class="grid col-4">
+          <view wx:for="{{item.num}}" wx:key wx:for-item="cell">
+            <image src='/images/{{item.type}}/{{item.type}}0{{index+1}}.png' class="thudernail" bindtap="bingImgChange"
+              data-cur="{{item.idx}}" data-type="{{item.type}}"
+              data-img="/images/{{item.type}}/{{item.type}}0{{index+1}}.png"></image>
+            <!-- <view class="cu-tag cuIcon-roundcheck bg-green top-position" hidden="{{item.imgShow}}"
+              wx:if="{{cell2='/images/{{item.type}}/{{item.type}}0{{index+1}}.png'}}" wx:for="{{list}}" wx:for-item="cell2" wx:key></view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="del">
+    <button class="cu-btn cuIcon-delete bg-grey shadow boder-raduis" bindtap="clearAll"></button>
+  </view>
+</view>

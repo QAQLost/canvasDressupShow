@@ -1,0 +1,41 @@
+.title{
+  font-size: 20rpx;
+  font: 2em sans-serif;
+  text-align: center;
+  padding: 10rpx;
+  width: 100%;
+}
+.sameSize{
+  width: 300rpx;
+  height: 600rpx;
+}
+.thudernail{
+  width: 100rpx;
+  height: 150rpx;
+}
+.border{
+  border: 5rpx solid red;
+}
+.boder-raduis{
+  position: fixed;
+  width: 70rpx;
+  z-index: 2;
+  height: 70rpx;
+  border-radius: 50%;
+  line-height: 70rpx;
+  font-size: 50rpx;
+  right: 10%;
+  bottom: 5%;
+  margin: auto;
+  padding: 0;
+}
+.top-position{
+  border-radius: 200rpx;
+  position: relative;
+  top: -10rpx;
+  right: -10rpx;
+  padding: 0rpx 10rpx;
+  height: 28rpx;
+  color: var(--white);
+  margin-top: -210rpx;
+}
