@@ -15,10 +15,9 @@
         <view class="grid col-4">
           <view wx:for="{{item.num}}" wx:key wx:for-item="cell">
             <image src='/images/{{item.type}}/{{item.type}}0{{index+1}}.png' class="thudernail" bindtap="bingImgChange"
-              data-cur="{{item.idx}}" data-type="{{item.type}}"
+              data-cur="{{item.idx}}" data-offset="{{index}}"
               data-img="/images/{{item.type}}/{{item.type}}0{{index+1}}.png"></image>
-            <!-- <view class="cu-tag cuIcon-roundcheck bg-green top-position" hidden="{{item.imgShow}}"
-              wx:if="{{cell2='/images/{{item.type}}/{{item.type}}0{{index+1}}.png'}}" wx:for="{{list}}" wx:for-item="cell2" wx:key></view> -->
+            <view class="cu-tag cuIcon-roundcheck bg-green top-position" wx:if="{{index==item.offset}}" hidden="{{!item.badge}}"></view>
           </view>
         </view>
       </view>

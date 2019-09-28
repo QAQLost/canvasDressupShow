@@ -10,31 +10,36 @@ Page({
       name: '西裤',
       num: 4,
       type: 'xk',
-      badge: false
+      badge: false,
+      offset:0
     }, {
       idx: 1,
       name: '衬衣',
       num: 2,
       type: 'cy',
-      badge: false
+      badge: false,
+      offset:0
     }, {
       idx: 2,
       name: '马甲',
       num: 1,
       type: 'mj',
-      badge: false
+      badge: false,
+      offset:0
     }, {
       idx: 3,
       name: '西服',
       num: 7,
       type: 'xf',
-      badge: false
+      badge: false,
+      offset:0
     }, {
       idx: 4,
       name: '大衣',
       num: 5,
       type: 'dy',
-      badge: false
+      badge: false,
+      offset:0
     }],
     list: ['', '', '', '','']
   },
@@ -42,17 +47,20 @@ Page({
   bingImgChange: function (e) {
     let img = e.currentTarget.dataset.img;
     let cur = e.currentTarget.dataset.cur;
+    let offset = e.currentTarget.dataset.offset;
     let badge = "wardrobe[" + cur + "].badge"
+    let changeOffset = "wardrobe[" + cur + "].offset"
     let badgeFlag = true;
     let list = this.data.list;
     let idx = "list[" + cur + "]"
     if (list[cur] == img) {
       img = "";
       badgeFlag = false;
-    }
+    }  
     this.setData({
       [idx]: img,
-      [badge]: badgeFlag
+      [badge]: badgeFlag,
+      [changeOffset]:offset
     })
     this.drawClothes(list);
   },

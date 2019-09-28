@@ -13,9 +13,6 @@
   width: 100rpx;
   height: 150rpx;
 }
-.border{
-  border: 5rpx solid red;
-}
 .boder-raduis{
   position: fixed;
   width: 70rpx;
